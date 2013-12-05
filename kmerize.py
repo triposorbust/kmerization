@@ -6,7 +6,7 @@ LENGTH = 15
 
 def kmerize(astring, n):
     d = { }
-    for i in xrange(len(astring) - n):
+    for i in xrange(len(astring) - (n-1)):
         key = astring[i:i+n]
         d[key] = d.get(key,0) + 1
     return d
